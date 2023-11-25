@@ -10,7 +10,7 @@
                     <div class="block">
                         <span class="d-block mb-3 text-white">Réalisez vos rêves</span>
                         <h2 class="animated fadeInUp mb-5 entrance-text">Facilitez la réalisation <br>de votre projet d'immigration <br>au Canada.</h2>
-                        <a href="#" target="_blank" class="btn btn-main animated fadeInUp btn-round-full" >En savoir plus<i class="btn-icon fa fa-angle-right ml-2"></i></a>
+                        <a href="{{ url_for('about') }}" target="_blank" class="btn btn-main animated fadeInUp btn-round-full" style="background-color: white; color: #222328;" >En savoir plus<i class="btn-icon fa fa-angle-right ml-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -74,12 +74,12 @@
                 <div class="col-lg-6 offset-lg-6 offset-md-0">
                     <div class="about-item ">
                         <span class="h6 text-color">Qui sommes nous ?</span>
-                        <h2 class="mt-3 mb-4 position-relative content-title">Nous sommes une équipe dynamique de personnes créatives.</h2>
+                        <h2 class="mt-3 mb-4 position-relative content-title">Nous sommes une équipe dynamique de personnes spécialisées.</h2>
                         <div class="about-content">
                             <h4 class="mb-3 position-relative">Nous avons la solution à vos problèmes</h4>
                             <p class="mb-5">Nous sommes bien plus qu'une agence d'immigration. Nous sommes des facilitateurs de rêves, des architectes de parcours et des guides à travers le passionnant processus d'immigration au Canada.</p>
     
-                            <a href="#" class="btn btn-main btn-round-full">Contactez nous</a>
+                            <a href="{{ url_for('contact') }}" class="btn btn-main btn-round-full" style="background-color: red; color: white;">Contactez nous</a>
                         </div>
                     </div>
                 </div>

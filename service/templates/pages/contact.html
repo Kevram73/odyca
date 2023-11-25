@@ -7,12 +7,12 @@
         <div class="row">
           <div class="col-md-12">
             <div class="block text-center">
-              <span class="text-white">Contact Us</span>
-              <h1 class="text-capitalize mb-4 text-lg">Get in Touch</h1>
+              <span class="text-white">Contactez nous</span>
+              <h1 class="text-capitalize mb-4 text-lg">Prendre contact avec nous</h1>
               <ul class="list-inline">
-                <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+                <li class="list-inline-item"><a href="index.html" class="text-white">ODYCA</a></li>
                 <li class="list-inline-item"><span class="text-white">/</span></li>
-                <li class="list-inline-item"><a href="#" class="text-white-50">Contact Us</a></li>
+                <li class="list-inline-item"><a href="#" class="text-white-50">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -34,47 +34,47 @@
                             </div>
                         </div>
                         <!-- end message -->
-                        <span class="text-color">Send a message</span>
-                        <h3 class="text-md mb-4">Contact Form</h3>
+                        <span class="text-color">Envoyez nous un message</span>
+                        <h3 class="text-md mb-4">Formulaire de contact</h3>
                         <div class="form-group">
-                            <input name="name" type="text" class="form-control" placeholder="Your Name">
+                            <input name="name" type="text" class="form-control" placeholder="Votre nom">
                         </div>
                         <div class="form-group">
-                            <input name="email" type="email" class="form-control" placeholder="Email Address">
+                            <input name="email" type="email" class="form-control" placeholder="Adresse Email">
                         </div>
                         <div class="form-group-2 mb-4">
-                            <textarea name="message" class="form-control" rows="4" placeholder="Your Message"></textarea>
+                            <textarea name="message" class="form-control" rows="4" placeholder="Votre message"></textarea>
                         </div>
-                        <button class="btn btn-main" name="submit" type="submit">Send Message</button>
+                        <button class="btn btn-main" name="submit" type="submit" style="background-color: red; color: white;">Envoyez</button>
                     </form>
                 </div>
     
                 <div class="col-lg-5 col-sm-12">
                     <div class="contact-content pl-lg-5 mt-5 mt-lg-0">
-                        <span class="text-muted">We are Professionals</span>
-                        <h2 class="mb-5 mt-2">Don’t Hesitate to contact with us for any kind of information</h2>
+                        <span class="text-muted">Nous sommes des professionnels</span>
+                        <h3 class="mb-5 mt-2">N'hésitez pas à nous contacter pour tout type d'information</h3>
     
                         <ul class="address-block list-unstyled">
                             <li>
-                                <i class="ti-direction mr-3"></i>North Main Street,Brooklyn Australia
+                                <i class="ti-direction mr-3" style="color: #222328;"></i>7114 Triumph Lana, Mississauga ON L5N OC5, Canada
                             </li>
                             <li>
-                                <i class="ti-email mr-3"></i>Email: contact@mail.com
+                                <i class="ti-email mr-3" style="color: #222328;"></i>Email: info.odyca.immigration@gmail.com
                             </li>
                             <li>
-                                <i class="ti-mobile mr-3"></i>Phone:+88 01672 506 744
+                                <i class="ti-mobile mr-3" style="color:#222328"></i>Tel:+1 514-840-3091
                             </li>
                         </ul>
     
                         <ul class="social-icons list-inline mt-5">
                             <li class="list-inline-item">
-                                <a href="http://www.themefisher.com"><i class="fab fa-facebook-f"></i></a>
+                                <a href="http://www.themefisher.com"><i class="fab fa-facebook-f" style="color: red;"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="http://www.themefisher.com"><i class="fab fa-twitter"></i></a>
+                                <a href="http://www.themefisher.com"><i class="fab fa-twitter" style="color: red;"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="http://www.themefisher.com"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="http://www.themefisher.com"><i class="fab fa-linkedin-in" style="color: red;"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -86,6 +86,42 @@
     <div class="google-map">
         <div id="map"></div>
     </div>
+    <script>
+        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+          key: "AIzaSyDqKO4r4H5m7w6hDtM6lCC7u0N02FMKTD4",
+          // Add other bootstrap parameters as needed, using camel case.
+          // Use the 'v' parameter to indicate the version to load (alpha, beta, weekly, etc.)
+        });
+      </script>
+      <script>
+        let map;
+
+        async function initMap() {
+        // The location of Uluru
+        const position = { lat: 43.5822838, lng: -79.7856009 };
+        // Request needed libraries.
+        //@ts-ignore
+        const { Map } = await google.maps.importLibrary("maps");
+        const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+
+        // The map, centered at Uluru
+        map = new Map(document.getElementById("map"), {
+            zoom: 4,
+            center: position,
+            mapId: "DEMO_MAP_ID",
+        });
+
+        // The marker, positioned at Uluru
+        const marker = new AdvancedMarkerView({
+            map: map,
+            position: position,
+            title: "Uluru",
+        });
+        }
+
+        initMap();
+      </script>
+      
     <!-- footer Start -->
     {% include 'partials/footer.html' %}
        
