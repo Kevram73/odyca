@@ -5,7 +5,7 @@ from flask_wtf import csrf
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root@localhost/odyca'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['STATIC_FOLDER'] = "./static/"
 app.config['SECRET_KEY'] = 'secret_key'
