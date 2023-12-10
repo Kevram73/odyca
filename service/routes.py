@@ -41,7 +41,7 @@ def contact():
 @app.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
     form = LoginForm()
-    if form.validate_on_submit():
+    if form.validate_on_submit(): 
         user = User.query.filter_by(username=form.username.data).first()
         print(user)
         if user:
