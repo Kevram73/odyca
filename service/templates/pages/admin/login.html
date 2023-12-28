@@ -23,14 +23,13 @@
                   
                   
                   <form method="post">
-                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                    {{ form.csrf_token }}
                     <div class="form-group input-group" style="padding-top: 20px; ">
-                      
-                      <input name="email" class="form-control" placeholder="Email" type="email">
+                      {{ form.email }}
                     </div>
                     <div class="form-group input-group" style="padding-top: 20px; padding-bottom: 20px;">
                       
-                      <input name="password" class="form-control" placeholder="Mot de passe" type="password">
+                      {{ form.password }}
                     </div>
                     
                     <div class="form-group" style="padding-bottom: 40px; ">

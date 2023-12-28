@@ -1,0 +1,63 @@
+<aside class="left-sidebar" data-sidebarbg="skin6">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <!-- User Profile-->
+                <li class="sidebar-item pt-2">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url_for('admin_dashboard') }}"
+                        aria-expanded="false">
+                        <i class="far fa-clock" aria-hidden="true"></i>
+                        <span class="hide-menu">Tableau de bord</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url_for('admin_mybox') }}"
+                        aria-expanded="false">
+                        <i class="fa fa-box" aria-hidden="true"></i>
+                        <span class="hide-menu">Mon Box</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url_for('admin_articles') }}"
+                        aria-expanded="false">
+                        <i class="fa fa-table" aria-hidden="true"></i>
+                        <span class="hide-menu">Articles</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url_for('admin_users') }}"
+                        aria-expanded="false">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <span class="hide-menu">Utilisateurs</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url_for('admin_data') }}"
+                        aria-expanded="false">
+                        <i class="fa fa-font" aria-hidden="true"></i>
+                        <span class="hide-menu">Données utiles</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url_for('admin_documents') }}"
+                        aria-expanded="false">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        <span class="hide-menu">Documents</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="404.html"
+                        aria-expanded="false">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <span class="hide-menu">¨Paramètres</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+</aside>

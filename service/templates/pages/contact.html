@@ -36,14 +36,43 @@
                         <!-- end message -->
                         <span class="text-color">Envoyez nous un message</span>
                         <h3 class="text-md mb-4">Formulaire de contact</h3>
-                        <div class="form-group">
-                            <input name="name" type="text" class="form-control" placeholder="Votre nom">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="surname">Prénom *</label>
+                                    <input name="surname" type="text" class="form-control" placeholder="Votre prénom" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label for="name">Nom *</label>
+                                    <input name="name" type="text" class="form-control" placeholder="Votre nom" required>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input name="email" type="email" class="form-control" placeholder="Adresse Email">
+                            <label for="profil">Choisir votre profil *</label>
+                            <select name="pofil" id="profil" class="form-control" required>
+                                <option value="client">Candidat</option>
+                                <option value="partenaire">Entreprise</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Courriel *</label>
+                            <input name="email" type="email" class="form-control" placeholder="monmail@dotnet.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Numero de téléphone *</label>
+                            <input name="phone" type="tel" class="form-control" placeholder="Votre numéro de télphone ici">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Objet *</label>
+                            <input name="objet" type="text" class="form-control" placeholder="Raison de contact">
                         </div>
                         <div class="form-group-2 mb-4">
-                            <textarea name="message" class="form-control" rows="4" placeholder="Votre message"></textarea>
+                            <label for="email">Message *</label>
+                            <textarea name="message" class="form-control" rows="4" placeholder="Entrer votre message ici"></textarea>
                         </div>
                         <button class="btn btn-main" name="submit" type="submit" style="background-color: red; color: white;">Envoyez</button>
                     </form>
@@ -55,13 +84,13 @@
                         <h3 class="mb-5 mt-2">N'hésitez pas à nous contacter pour tout type d'information</h3>
     
                         <ul class="address-block list-unstyled">
-                            <li>
+                            <li style="font-size: 20px;">
                                 <i class="ti-direction mr-3" style="color: #222328;"></i>7114 Triumph Lana, Mississauga ON L5N OC5, Canada
                             </li>
-                            <li>
+                            <li style="margin-top: 10%; font-size: 20px;">
                                 <i class="ti-email mr-3" style="color: #222328;"></i>Email: info.odyca.immigration@gmail.com
                             </li>
-                            <li>
+                            <li style="margin-top: 10%; font-size: 20px;">
                                 <i class="ti-mobile mr-3" style="color:#222328"></i>Tel:+1 514-840-3091
                             </li>
                         </ul>
@@ -86,42 +115,15 @@
     <div class="google-map">
         <div id="map"></div>
     </div>
+    
     <script>
-        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-          key: "AIzaSyDqKO4r4H5m7w6hDtM6lCC7u0N02FMKTD4",
-          // Add other bootstrap parameters as needed, using camel case.
-          // Use the 'v' parameter to indicate the version to load (alpha, beta, weekly, etc.)
-        });
-      </script>
-      <script>
-        let map;
-
-        async function initMap() {
-        // The location of Uluru
-        const position = { lat: 43.5822838, lng: -79.7856009 };
-        // Request needed libraries.
-        //@ts-ignore
-        const { Map } = await google.maps.importLibrary("maps");
-        const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
-
-        // The map, centered at Uluru
-        map = new Map(document.getElementById("map"), {
-            zoom: 4,
-            center: position,
-            mapId: "DEMO_MAP_ID",
-        });
-
-        // The marker, positioned at Uluru
-        const marker = new AdvancedMarkerView({
-            map: map,
-            position: position,
-            title: "Uluru",
-        });
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 43.5822839, lng: -79.7833049},
+            zoom: 14
+          });
         }
-
-        initMap();
       </script>
-      
     <!-- footer Start -->
     {% include 'partials/footer.html' %}
        

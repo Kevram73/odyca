@@ -5,6 +5,7 @@ from flask_wtf import FlaskForm
 
 
 class LoginForm(FlaskForm):
-    username = StringField(validators=[InputRequired(), Length(min=4)], render_kw={"placeholder": "Nom d'utilisateur", "class":"form-control"})
+    email = StringField(validators=[InputRequired(), Length(min=4)], render_kw={"placeholder": "Adresse email", "class":"form-control"})
     password = PasswordField(validators=[InputRequired(), Length(min=4)], render_kw={"placeholder": "Mot de passe", "class":"form-control"})
-    submit = SubmitField("Login")
+    submit = SubmitField("Se connecter", render_kw={"class":"btn btn-primary btn-block", "style": "width: 100%"})
+    
